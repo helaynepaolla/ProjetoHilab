@@ -140,15 +140,15 @@ public class ConexaoTcpDataSource implements DataSource {
         inputStream = new ByteArrayInputStream(recebe.getBytes());
         System.out.println("Dado recebido foi: \n" + inputStream.toString() + " \n");
 
-        // Defina o tamanho do buffer de leitura
+        // Definindo o tamanho do buffer de leitura
         int bufferSize = 1024;
         byte[] buffer = new byte[bufferSize];
         int bytesRead = inputStream.read(buffer);
         byte[] receivedData = new byte[bytesRead];
-        // Tente ler dados da InputStream
+        // Tentando ler dados da InputStream
         try {
             if (bytesRead > 0) {
-                // Se dados foram lidos, retorne apenas a parte relevante do buffer
+                // Se dados foram lidos, vai ser retornado apenas a parte relevante do buffer
                 System.arraycopy(buffer, 0, receivedData, 0, bytesRead);
                 return receivedData;
             }

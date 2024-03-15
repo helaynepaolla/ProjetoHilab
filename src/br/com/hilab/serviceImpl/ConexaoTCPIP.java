@@ -71,7 +71,6 @@ public class ConexaoTCPIP {
                             "Conexão Servidor", JOptionPane.PLAIN_MESSAGE);
                     clientSocket = serverSocket.accept(); // Este método bloqueia até que uma conexão seja estabelecida
 
-                    // Exemplo de escrita de dados para o cliente
                     outputStream = new ObjectOutputStream(clientSocket.getOutputStream());
                     outputStream.flush();
                     outputStream.writeObject(this.dadosEnviado);

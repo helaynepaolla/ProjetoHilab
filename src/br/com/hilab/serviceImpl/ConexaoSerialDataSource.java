@@ -153,7 +153,7 @@ public class ConexaoSerialDataSource implements DataSource{
      */
     @Override
     public void close() throws IOException {
-        // Implementar lógica para fechar a conexão Serial
+        // Implementando lógica para fechar a conexão Serial
         try {
             serialOut.close();
             System.out.println("Fechando conexão Serial na porta \n" + this.portaCOM );
